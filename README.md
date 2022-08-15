@@ -7,3 +7,6 @@ sudo apt install build-essential
 ## install fltk
 see the instruction from this website 
 https://www.fltk.org/
+
+## run
+fltk-config --compile tic_tac_tao_fltk.cpp
