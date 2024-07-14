@@ -82,7 +82,7 @@ public:
 
 	}
 	bool my_move() {
-		if (win()!=empty)
+		if (win()!=emp)
 		{
 			return false;
 		}

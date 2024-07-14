@@ -32,11 +32,11 @@ void draw_line() {
 }
 
 
-void box_creater(int a, int b, char c = empty) {
+void box_creater(int a, int b, char c = emp) {
 	int box_l = Window_H / 3;
 	fl_color(color_box);
 	fl_polygon(box_l * a, box_l * b, box_l * (a + 1), box_l * b, box_l * (a + 1), box_l * (b + 1), box_l * a, box_l * (b + 1));
-	if (c != empty) {
+	if (c != emp) {
 		if (c == oponent)
 		{
 			fl_color(color_font);
@@ -54,7 +54,7 @@ void box_creater(int a, int b, char c = empty) {
 
 void Win_chek() {
 
-	if (game.no_move() || game.win() != empty)
+	if (game.no_move() || game.win() != emp)
 	{
 		if (game.win() == me)
 		{

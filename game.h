@@ -3,7 +3,7 @@
 # include<time.h>
 using namespace std;
 
-const char empty = '_';
+const char emp = '_';
 const char me = 'o';
 const char oponent = 'x';
 
@@ -19,7 +19,7 @@ protected:
 		return;
 	}
 	bool is_empty(int i, int j) {
-		if (position[i][j] == empty)
+		if (position[i][j] == emp)
 		{
 			return true;
 		}
@@ -32,7 +32,7 @@ protected:
 			cout << "this shell is already empty \n";
 			return;
 		}
-		position[i][j] = empty;
+		position[i][j] = emp;
 
 	}
 	char show_position(int i, int j) {
@@ -44,7 +44,7 @@ public:
 	Tic_Tac_Tao() {
 		for (int j = 0; j < 3; ++j)
 		{
-			for (int i = 0; i < 3; ++i) { position[i][j] = empty;}
+			for (int i = 0; i < 3; ++i) { position[i][j] = emp;}
 		}
 	}
 	char win() {
@@ -52,7 +52,7 @@ public:
 		{
 			if (position[i][0] == position[i][1] && position[i][1] == position[i][2])
 			{
-				if (position[i][0] != empty)
+				if (position[i][0] != emp)
 				{
 					return position[i][0];
 				}
@@ -63,7 +63,7 @@ public:
 		{
 			if (position[0][i] == position[1][i] && position[1][i] == position[2][i])
 			{
-				if (position[0][i] != empty)
+				if (position[0][i] != emp)
 				{
 					return position[0][i];
 				}
@@ -72,19 +72,19 @@ public:
 		}
 		if (position[0][0] == position[1][1] && position[1][1] == position[2][2])
 		{
-			if (position[0][0] != empty)
+			if (position[0][0] != emp)
 			{
 				return position[0][0];
 			}
 		}
 		if (position[0][2] == position[1][1] && position[1][1] == position[2][0])
 		{
-			if (position[0][2] != empty)
+			if (position[0][2] != emp)
 			{
 				return position[0][2];
 			}
 		}
-		return empty;
+		return emp;
 
 	}
 
@@ -103,7 +103,7 @@ public:
 		if ( i >= 0 && i < 3 && j >= 0 && j < 3)
 		{
 
-			if (position[i][j] == empty)
+			if (position[i][j] == emp)
 			{
 				position[i][j] = a;
 				return true;
@@ -127,7 +127,7 @@ public:
 		return true;
 	}
 	void Win_cheker() {
-		if (no_move() || win() != empty)
+		if (no_move() || win() != emp)
 		{
 			if (win() == me)
 			{
